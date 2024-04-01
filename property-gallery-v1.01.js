@@ -125,7 +125,7 @@ function setupGammaPicACloseClickListener() {
     var gammaPicA = document.getElementById("gamma-pic-a");
     gammaPicA.style.width = "12rem"; // Reset width of 'beta-pic-a'
     gammaPicA.style.height = "12rem"; // Reset height of 'beta-pic-a'
-    gammaPicA.style.left = calculateTotalLeft(); // Adjust left position based on gallery width
+    gammaPicA.style.left = totalLeftForGamma(); // Adjust left position based on gallery width
   });
 }
 
@@ -151,7 +151,7 @@ function setupGammaPicBCloseClickListener() {
     var gammaPicB = document.getElementById("gamma-pic-b");
     gammaPicB.style.width = "12rem"; // Reset width of 'beta-pic-a'
     gammaPicB.style.height = "12rem"; // Reset height of 'beta-pic-a'
-    gammaPicB.style.left = calculateTotalLeft(); // Adjust left position based on gallery width
+    gammaPicB.style.left = totalLeftForGamma(); // Adjust left position based on gallery width
   });
 }
 
@@ -177,7 +177,7 @@ function setupGammaPicCCloseClickListener() {
     var gammaPicC = document.getElementById("gamma-pic-c");
     gammaPicC.style.width = "12rem"; // Reset width of 'beta-pic-a'
     gammaPicC.style.height = "12rem"; // Reset height of 'beta-pic-a'
-    gammaPicC.style.left = calculateTotalLeft(); // Adjust left position based on gallery width
+    gammaPicC.style.left = totalLeftForGamma(); // Adjust left position based on gallery width
   });
 }
 
