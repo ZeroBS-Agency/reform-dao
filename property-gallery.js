@@ -106,7 +106,7 @@ function setupBetaPicBCloseClickListener() {
 function setupGammaPicAOpenClickListener() {
   var gammaPicAOpen = document.getElementById("gamma-pic-a-open");
   gammaPicAOpen.addEventListener("click", function () {
-    gammaicAOpen.style.display = "none"; // Hide the 'open' button
+    gammaPicAOpen.style.display = "none"; // Hide the 'open' button
     var gammaPicAClose = document.getElementById("gamma-pic-a-close");
     gammaPicAClose.style.display = "flex"; // Show the 'close' button
     var gammaPicA = document.getElementById("gamma-pic-a");
@@ -132,7 +132,7 @@ function setupGammaPicACloseClickListener() {
 function setupGammaPicBOpenClickListener() {
   var gammaPicBOpen = document.getElementById("gamma-pic-b-open");
   gammaPicBOpen.addEventListener("click", function () {
-    gammaicBOpen.style.display = "none"; // Hide the 'open' button
+    gammaPicBOpen.style.display = "none"; // Hide the 'open' button
     var gammaPicBClose = document.getElementById("gamma-pic-b-close");
     gammaPicBClose.style.display = "flex"; // Show the 'close' button
     var gammaPicB = document.getElementById("gamma-pic-b");
@@ -158,7 +158,7 @@ function setupGammaPicBCloseClickListener() {
 function setupGammaPicCOpenClickListener() {
   var gammaPicCOpen = document.getElementById("gamma-pic-c-open");
   gammaPicCOpen.addEventListener("click", function () {
-    gammaicCOpen.style.display = "none"; // Hide the 'open' button
+    gammaPicCOpen.style.display = "none"; // Hide the 'open' button
     var gammaPicCClose = document.getElementById("gamma-pic-c-close");
     gammaPicCClose.style.display = "flex"; // Show the 'close' button
     var gammaPicC = document.getElementById("gamma-pic-c");
@@ -182,37 +182,39 @@ function setupGammaPicCCloseClickListener() {
 }
 
 function setLeftPositionBasedOnGalleryWidth() {
-    // Calculate total left for betaPicA and betaPicB as before
-    var totalLeftForBeta = calculateTotalLeft();
-  
-    // Get the width of the .property-gallery_col-a element
-    var galleryColA = document.querySelector(".property-gallery_col-a");
-    var galleryWidth = galleryColA.offsetWidth; // Width in pixels
-    
-    // Convert 16.5rem to pixels
-    var remInPixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    var additionalLeftInPx = 16.5 * remInPixels; // Convert 16.5rem to pixels
-    
-    // Calculate the total left for gammaPicA, gammaPicB, and gammaPicC
-    var totalLeftForGamma = galleryWidth + additionalLeftInPx + 'px';
-  
-    // Apply the calculated total left positions
-    var betaPicA = document.getElementById("beta-pic-a");
-    var betaPicB = document.getElementById("beta-pic-b");
-    betaPicA.style.left = totalLeftForBeta;
-    betaPicB.style.left = totalLeftForBeta;
-  
-    var gammaPicA = document.getElementById("gamma-pic-a");
-    var gammaPicB = document.getElementById("gamma-pic-b");
-    var gammaPicC = document.getElementById("gamma-pic-c");
-    gammaPicA.style.left = totalLeftForGamma;
-    gammaPicB.style.left = totalLeftForGamma;
-    gammaPicC.style.left = totalLeftForGamma;
-  }
-  
-  // You'll also need to adjust the calculateTotalLeft function or create a new one specifically for the gamma pictures if the calculation differs from what's needed for the beta pictures.
-  
-  // Ensure this updated `setLeftPositionBasedOnGalleryWidth` function is called on both DOMContentLoaded and window resize events to apply these changes after the DOM is loaded and when the window size is adjusted.  
+  // Calculate total left for betaPicA and betaPicB as before
+  var totalLeftForBeta = calculateTotalLeft();
+
+  // Get the width of the .property-gallery_col-a element
+  var galleryColA = document.querySelector(".property-gallery_col-a");
+  var galleryWidth = galleryColA.offsetWidth; // Width in pixels
+
+  // Convert 16.5rem to pixels
+  var remInPixels = parseFloat(
+    getComputedStyle(document.documentElement).fontSize
+  );
+  var additionalLeftInPx = 16.5 * remInPixels; // Convert 16.5rem to pixels
+
+  // Calculate the total left for gammaPicA, gammaPicB, and gammaPicC
+  var totalLeftForGamma = galleryWidth + additionalLeftInPx + "px";
+
+  // Apply the calculated total left positions
+  var betaPicA = document.getElementById("beta-pic-a");
+  var betaPicB = document.getElementById("beta-pic-b");
+  betaPicA.style.left = totalLeftForBeta;
+  betaPicB.style.left = totalLeftForBeta;
+
+  var gammaPicA = document.getElementById("gamma-pic-a");
+  var gammaPicB = document.getElementById("gamma-pic-b");
+  var gammaPicC = document.getElementById("gamma-pic-c");
+  gammaPicA.style.left = totalLeftForGamma;
+  gammaPicB.style.left = totalLeftForGamma;
+  gammaPicC.style.left = totalLeftForGamma;
+}
+
+// You'll also need to adjust the calculateTotalLeft function or create a new one specifically for the gamma pictures if the calculation differs from what's needed for the beta pictures.
+
+// Ensure this updated `setLeftPositionBasedOnGalleryWidth` function is called on both DOMContentLoaded and window resize events to apply these changes after the DOM is loaded and when the window size is adjusted.
 
 // Consolidated DOMContentLoaded event
 document.addEventListener("DOMContentLoaded", function () {
