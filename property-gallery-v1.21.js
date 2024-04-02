@@ -194,6 +194,7 @@ function setupGammaPicBOpenClickListener() {
     gammaPicB.style.width = "100%";
     gammaPicB.style.height = "100%";
     gammaPicB.style.left = "0rem";
+    gammaPicB.style.top = "0rem";
     gammaPicB.style.bottom = "0rem";
   });
 }
@@ -208,6 +209,7 @@ function setupGammaPicBCloseClickListener() {
     gammaPicB.style.width = "12rem";
     gammaPicB.style.height = "12rem";
     gammaPicB.style.left = totalLeftForGamma();
+    gammaPicB.style.top = "13.25rem";
     gammaPicB.style.bottom = "0rem";
   });
 }
